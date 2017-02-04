@@ -4,9 +4,12 @@
 
 def sortwithloops(input):
     l = []
-    #n = length(input)
-    for key in input:
-        l.append(key)
+    for val in input:
+        l.append(val)
+        for i in range(len(l)-1):
+            j = i + 1
+            if l[i] > l[j]:
+                l[i], l[j] = l[j], l[i]
     return l
 	
 #2. fill in this function
@@ -23,7 +26,12 @@ def sortwithoutloops(input):
 #   do this with a loop, don't use the built in list functions
 
 def searchwithloops(input, value):
-    return #return a value
+    result = False
+    for i in input:
+        if i == value:
+            result = True
+            break
+    return result
 
 #4. fill in this function
 #   it takes a list for input and a value to search for
@@ -40,7 +48,7 @@ if __name__ == "__main__":
 
     print "sortwithLoops 1: \n %s" %  sortwithloops(L) # [3, 3, 5, 5, 6, 6, 13]
     print "sortwithoutLoops 2: \n %s" % sortwithoutloops(L) # [3, 3, 5, 5, 6, 6, 13]
-    #print "searchwithloops 3a: \n %s" % searchwithloops(L, 5) #true
-	#print "searchwithloops 3b: \n %s" % searchwithloops(L, 11) #false
+    print "searchwithloops 3a: \n %s" % searchwithloops(L, 5) #true
+    print "searchwithloops 3b: \n %s" % searchwithloops(L, 11) #false
     print "searchwithoutloops 4a: \n %s" % searchwithoutloops(L, 5) #true
     print "searchwithoutloops 4b: \n %s" % searchwithoutloops(L, 11) #false
