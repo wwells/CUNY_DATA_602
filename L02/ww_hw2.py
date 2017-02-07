@@ -48,18 +48,19 @@ def searchforsafety(list, rating):
 	return exists 
             
 # This is the main of the program.  Expected outputs are in comments after the function calls.
+# Attempted to evaluate using principles of reflection
 if __name__ == "__main__": 
-	
+
 	classname = "CarEvaluation"
 	eval1 = globals()[classname]("Ford", "High", 2)
 	eval2 = globals()[classname]("GMC", "Med", 4)
 	eval3 = globals()[classname]("Toyota", "Low", 3)
 
-	print "Car Count = %d" % getattr(CarEvaluation, "carCount") # Car Count = 3
+	print "Car Count = %d" % getattr(CarEvaluation, "carCount") 
 
-	getattr(eval1, "showEvaluation")() #The Ford has a High price and it's safety is rated a 2
-	getattr(eval2, "showEvaluation")() #The GMC has a Med price and it's safety is rated a 4
-	getattr(eval3, "showEvaluation")() #The Toyota has a Low price and it's safety is rated a 3
+	getattr(eval1, "showEvaluation")() 
+	getattr(eval2, "showEvaluation")() 
+	getattr(eval3, "showEvaluation")() 
 
 	L = [eval1, eval2, eval3]
 
