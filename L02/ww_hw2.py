@@ -11,7 +11,7 @@ class CarEvaluation:
 		self.Brand = Brand
 		self.Price = Price
 		self.SafetyR = SafetyR
-		CarEvaluation.carCount += 1
+		self.__class__.carCount += 1
 
 	def showEvaluation(self):
 		print "The %s has a %s price and its safety is rated a %d" % (self.Brand, self.Price, self.SafetyR)		
