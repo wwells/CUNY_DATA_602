@@ -117,7 +117,6 @@ def printnrow(data, n, top=True):
 			print data[-n]
 	print '------------------------------'
 
-
 def subset(data, key, values):
 	"""subset given data based on inputs using re.startswith"""
 	result = []
@@ -128,13 +127,13 @@ def subset(data, key, values):
 	return result
 
 def savefile(file):
-		"""save list of dictionaries into csv"""
-		keys = file[0].keys()
-		with open('caroutput.csv', 'wb') as f:
-			writer = csv.DictWriter(f, keys)
-			writer.writeheader()
-			writer.writerows(file)
-			print 'Saving file...'
+	"""save list of dictionaries into csv"""
+	keys = file[0].keys()
+	with open('caroutput.csv', 'wb') as f:
+		writer = csv.DictWriter(f, keys)
+		writer.writeheader()
+		writer.writerows(file)
+		print 'Saving file...'
 
 
 # Main of the program
