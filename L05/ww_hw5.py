@@ -18,7 +18,7 @@ from tkFileDialog import askopenfilename
 import csv
 
 class Regression:
-	'a class for performing leas squares method of linear regression'
+	'a class for performing least squares method of linear regression'
 
 	def __init__(self):
 		"""initialize class by picking a file using tkinter gui"""
@@ -76,10 +76,11 @@ if __name__ == '__main__':
 	d = R.f
 	print ''
 	get_regression(d)
-	print ''
+	print '------------------------------------------------'
 	print 'Analysis:'
-	print 'Body Weight Outliers like the two elephants make the Y intercept larger than the expected body weight of 51 of the 62 animals'
-	print 'What if we remove the two elephant outliers?'
+	print 'Body Weight outliers like the two elephants make the Y intercept'
+	print '	larger than the expected body weight of 51 of the 62 animals'
+	print 'What happens when we remove the two elephant outliers?'
 	print '------------------------------------------------'
 	print ''
 
