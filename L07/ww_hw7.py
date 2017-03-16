@@ -58,6 +58,7 @@ def get_regression(data):
 	covariance = cov_calc(data, 1, xmean, 2, ymean)
 	B1 = round(covariance / xvariance, 4)
 	B0 = round(ymean - B1 * xmean, 4)
+	return 'Body Weight = %s * Brain Weight + %s' % (B1, B0)
 
 ## scipy curve_fit helpers and fit function to time
 def lin_func(x, a, b):
@@ -68,6 +69,7 @@ def gauss_func(x, a, b, c):
 
 def scipy_curve_fit(func):
 	popt, pcov = curve_fit(func, x, y)
+	return popt
 
 
 if __name__ == '__main__':
@@ -78,12 +80,16 @@ if __name__ == '__main__':
 	y = [row[2] for row in d]
 	n = 10000
 
+	print 'Builtin Linear Regression'
+	print get_regression(d)
 	t = timeit.Timer(lambda: get_regression(d))
-	print 'Built in Method: %s: %s loops = %s seconds' % ('get_regression', n, t.timeit(n))
+	print 'TIMING - Built in Method: %s: %s loops = %s seconds' % ('get_regression', n, t.timeit(n))
+	print ''
+	print 'Scipy Linear Fit'
+	scilin = scipy_curve_fit(lin_func)
+	print 'Body Weight = %s * Brain Weight + %s' % (scilin[0], scilin[1])
 	t = timeit.Timer(lambda: scipy_curve_fit(lin_func))
-	print 'Scipy Linear Fit: %s: %s loops = %s seconds' % ('scipy_curve_fit(lin_func)', n, t.timeit(n))
-	t = timeit.Timer(lambda: scipy_curve_fit(gauss_func))
-	print 'Scipy Gauss Fit: %s: %s loops = %s seconds' % ('scipy_curve_fit(gauss_func)', n, t.timeit(n))	
+	print 'TIMING - Scipy Linear Fit: %s: %s loops = %s seconds' % ('scipy_curve_fit(lin_func)', n, t.timeit(n))
 	
 
 
