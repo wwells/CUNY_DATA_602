@@ -1,3 +1,4 @@
 /DiveIntoPython/*
 .DS_Store
 key*
+.ipynb_checkpoints/
