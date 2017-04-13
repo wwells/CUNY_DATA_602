@@ -9,6 +9,7 @@ b) Build functions to switch back and forth between:
 	* images - be able to view sample image in Jupyter notebook  (Viz1)
 	* vector - this is what we will primarily use to build our classifier; 
 		* Image = 28 * 28; convert to 1 * 784 vector for simplicity
+		* Dictionary: k = class, v = image vector
 c) build a simple classifier from scratch: 
 	* "Train" model:
 		* Subset training data by known number (classes)
