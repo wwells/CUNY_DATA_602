@@ -4,9 +4,10 @@ I'd like to use this as an opportunity to learn more about image manipulation an
 
 Propose:
 a) Import the original dataset: http://yann.lecun.com/exdb/mnist/ 
+    * Review distributions of classes (Viz)
 b) Build functions to switch back and forth between:
 	* original data format
-	* images - be able to view sample image in Jupyter notebook  (Viz1)
+	* images - be able to view sample image in Jupyter notebook  (Viz)
 	* vector - this is what we will primarily use to build our classifier; 
 		* Image = 28 * 28; convert to 1 * 784 vector for simplicity
 		* Dictionary: k = class, v = image vector
@@ -14,7 +15,7 @@ c) build a simple classifier from scratch:
 	* "Train" model:
 		* Subset training data by known number (classes)
 		* get mean pixel value for each class
-	* Viz model (Viz2):
+	* Viz model (Viz):
 		* convert mean value classifier to image, view each class in notebook
 d) Test model:
 	* Using holdover data, compare pixel values in test image to mean pixel values for classes
@@ -22,7 +23,7 @@ d) Test model:
 		* Examine and report on different cost function pro-cons
 e)  Results reporting:
 	* build DF reporting filename, classification, distance to each class, and ground truth
-f)  describe performance of models, incorporate into performance visualization (Viz3)
+f)  describe performance of models, incorporate into performance visualization (Viz)
 
 Possibly in scope - compare the simple built from scratch model to more complex models using available libraries: 
 
@@ -36,7 +37,12 @@ Use AWS (s3 / EBS), and port forward a jupyter notebook in an EC2 instance.
 
 References:
 
-https://martin-thoma.com/classify-mnist-with-pybrain/
-https://gist.github.com/akesling/5358964
-When Life is Linear, Tim Chartier
-http://colah.github.io/posts/2014-10-Visualizing-MNIST/
+
+    https://www.kaggle.com/archaeocharlie/digit-recognizer/a-beginner-s-approach-to-classification
+    https://martin-thoma.com/classify-mnist-with-pybrain/
+    https://gist.github.com/akesling/5358964
+    When Life is Linear, Tim Chartier
+    http://colah.github.io/posts/2014-10-Visualizing-MNIST/
+    https://www.tensorflow.org/get_started/mnist/beginners
+
+
