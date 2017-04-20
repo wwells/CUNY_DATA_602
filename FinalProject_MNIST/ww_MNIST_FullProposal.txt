@@ -1,8 +1,22 @@
+The DATA 602 - Advanced Programming Techniques Final Project will serve as an opportunity to learn more 
+about image manipulation and classifier modelling.   Since I'm also enrolled in DATA 605 - 
+Fundamentals of Computational Mathematics, it will be a good opportunity to demonstrate and test
+basic Linear Algebra skills. 
 
-I'd like to use this as an opportunity to learn more about image manipulation and classification (particularly since I'm also enrolled in DATA 605 on linear algebra) and to jump in and start learning about python libraries for classifier modeling.   MNIST seems to be a good choice since there are a lot of existing materials on using this dataset.   While I don't expect to contribute anything new to MNIST research, it should prove to be an excellent personal educational opportunity.
+MNIST seems to be a good choice since there are a lot of existing materials on using this 
+dataset.   I don't expect to contribute anything new to MNIST research, but expect to personally 
+learn about best practices in this field.  
+
+I would propose to build a simple classifier from scratch that finds a distance metric between a sample image and a dataset that contrived from the mean pixel values of each class.   This is inspired by ideas proposed in section 4.2 of Tim Chartier's When Life Is Linear book.  Once we have our predictions, we will find appropriate ways to describe the performance of our model.  
 
 
-Propose:
+Resources:  
+I have set up a Jupyter notebook on a VM as part of an allocation grant from the Open Science Data Cloud (https://www.opensciencedatacloud.org/).  The OSDC offers services similar to commercial cloud providers like AWS, Azure and Google Compute, but is designed to serve the 'long tail' of the data science community by providing allocation grants to researchers in need of resources.  
+
+The full MNIST dataset is not large, and can be managed from the ephemeral storage in the VM.  I port forward the jupyter notebook through a proxy server and work in a browser on my local machine.   Github is used to manage the code.  
+
+
+Workflow:
 a) Import the original dataset: http://yann.lecun.com/exdb/mnist/ 
     * Review distributions of classes (Viz)
 b) Build functions to switch back and forth between:
@@ -11,38 +25,40 @@ b) Build functions to switch back and forth between:
 	* vector - this is what we will primarily use to build our classifier; 
 		* Image = 28 * 28; convert to 1 * 784 vector for simplicity
 		* Dictionary: k = class, v = image vector
-c) build a simple classifier from scratch: 
+c) Build a simple classifier from scratch: 
 	* "Train" model:
 		* Subset training data by known number (classes)
 		* get mean pixel value for each class
 	* Viz model (Viz):
 		* convert mean value classifier to image, view each class in notebook
-d) Test model:
 	* Using holdover data, compare pixel values in test image to mean pixel values for classes
-	* Potential comparison methods: Euclidian Distance, Cosine Similarity
-		* Examine and report on different cost function pro-cons
-e)  Results reporting:
-	* build DF reporting filename, classification, distance to each class, and ground truth
-f)  describe performance of models, incorporate into performance visualization (Viz)
+	* Compare using a) Euclidian Distance, b) Cosine Similarity
+d) Results Reporting: 
+	* Build DF, row = test image
+    * Report: ground truth (actual class), dist_values and predictions for each distance method    
+e)  Describe performance of models, incorporate into performance visualization (Viz)
+    * ROC measures - AUC, H-Measure, F1?   Others?   What are effective ways to measure non-binary classifiers?
 
-Possibly in scope - compare the simple built from scratch model to more complex models using available libraries: 
+
+EXTRA:
+compare the simple built from scratch model to more complex models using available libraries: 
 
 * explore scikit-learn, other python libraries for classifier modeling
 * train, test, and report using models (KNN, Linear Classifier, SVM, PCA, tSNE)
-* if time, explore and learn about neural nets - train model (pybrain /  lasagne?)
+* explore and learn about neural nets - train model (pybrain /  lasagne?)
 
-Required resources:
-Presume this can be accomplished entirely on a personal machine, but if, after early tests training/testing becomes too slow, will:
-Use AWS (s3 / EBS), and port forward a jupyter notebook in an EC2 instance. 
 
 References:
-
-
     https://www.kaggle.com/archaeocharlie/digit-recognizer/a-beginner-s-approach-to-classification
     https://martin-thoma.com/classify-mnist-with-pybrain/
     https://gist.github.com/akesling/5358964
     When Life is Linear, Tim Chartier
     http://colah.github.io/posts/2014-10-Visualizing-MNIST/
+    http://stackoverflow.com/questions/17210646/python-subplot-within-a-loop-first-panel-appears-in-wrong-position
     https://www.tensorflow.org/get_started/mnist/beginners
+    https://en.wikipedia.org/wiki/Cosine_similarity
+    https://en.wikipedia.org/wiki/Euclidean_distance
+
+
 
 
