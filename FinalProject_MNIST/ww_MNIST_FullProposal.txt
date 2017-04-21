@@ -7,13 +7,21 @@ MNIST seems to be a good choice since there are a lot of existing materials on u
 dataset.   I don't expect to contribute anything new to MNIST research, but expect to personally 
 learn about best practices in this field.  
 
-I would propose to build a simple classifier from scratch that finds a distance metric between a sample image and a dataset that contrived from the mean pixel values of each class.   This is inspired by ideas proposed in section 4.2 of Tim Chartier's When Life Is Linear book.  Once we have our predictions, we will find appropriate ways to describe the performance of our model.  
+I would propose to build a simple classifier from scratch that finds a distance metric between a 
+sample image and a dataset that contrived from the mean pixel values of each class.   This is 
+inspired by ideas proposed in section 4.2 of Tim Chartier's When Life Is Linear book.  Once we 
+have our predictions, we will find appropriate ways to describe the performance of our model.  
 
 
 Resources:  
-I have set up a Jupyter notebook on a VM as part of an allocation grant from the Open Science Data Cloud (https://www.opensciencedatacloud.org/).  The OSDC offers services similar to commercial cloud providers like AWS, Azure and Google Compute, but is designed to serve the 'long tail' of the data science community by providing allocation grants to researchers in need of resources.  
+I have set up a Jupyter notebook on a VM as part of an allocation grant from the Open Science Data 
+Cloud (https://www.opensciencedatacloud.org/).  The OSDC offers services similar to commercial cloud 
+providers like AWS, Azure and Google Compute, but is designed to serve the 'long tail' of the data 
+science community by providing allocation grants to researchers in need of resources.  
 
-The full MNIST dataset is not large, and can be managed from the ephemeral storage in the VM.  I port forward the jupyter notebook through a proxy server and work in a browser on my local machine.   Github is used to manage the code.  
+The full MNIST dataset is not large, and can be managed from the ephemeral storage in the VM.  I 
+port forward the jupyter notebook through a proxy server and work in a browser on my local machine. 
+Github is used to manage the code.  
 
 
 Workflow:
@@ -58,7 +66,4 @@ References:
     https://www.tensorflow.org/get_started/mnist/beginners
     https://en.wikipedia.org/wiki/Cosine_similarity
     https://en.wikipedia.org/wiki/Euclidean_distance
-
-
-
-
+    
