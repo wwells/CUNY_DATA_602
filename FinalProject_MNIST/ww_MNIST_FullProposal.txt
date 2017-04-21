@@ -26,7 +26,7 @@ Github is used to manage the code.
 
 Workflow:
 a) Import the original dataset: http://yann.lecun.com/exdb/mnist/ 
-    * Review distributions of classes (Viz)
+	* Review distributions of classes (Viz)
 b) Build functions to switch back and forth between:
 	* original data format
 	* images - be able to view sample image in Jupyter notebook  (Viz)
@@ -43,9 +43,9 @@ c) Build a simple classifier from scratch:
 	* Compare using a) Euclidian Distance, b) Cosine Similarity
 d) Results Reporting: 
 	* Build DF, row = test image
-    * Report: ground truth (actual class), dist_values and predictions for each distance method    
+	* Report: ground truth (actual class), dist_values and predictions for each distance method    
 e)  Describe performance of models, incorporate into performance visualization (Viz)
-    * ROC measures - AUC, H-Measure, F1?   Others?   What are effective ways to measure non-binary classifiers?
+	* ROC measures - AUC, H-Measure, F1?   Others?   What are effective ways to measure non-binary classifiers?
 
 
 EXTRA:
