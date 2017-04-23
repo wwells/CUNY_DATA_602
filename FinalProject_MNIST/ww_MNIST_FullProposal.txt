@@ -1,27 +1,29 @@
-The DATA 602 - Advanced Programming Techniques Final Project will serve as an opportunity to learn more 
-about image manipulation and classifier modelling.   Since I'm also enrolled in DATA 605 - 
-Fundamentals of Computational Mathematics, it will be a good opportunity to demonstrate and test
-basic Linear Algebra skills. 
+The DATA 602 - Advanced Programming Techniques Final Project will serve as an opportunity 
+to learn more about image manipulation and multiclass classification.   Since I'm also 
+enrolled in DATA 605 - Fundamentals of Computational Mathematics, it will be a good 
+opportunity to demonstrate and test basic Linear Algebra skills. 
 
 MNIST seems to be a good choice since there are a lot of existing materials on using this 
-dataset.   I don't expect to contribute anything new to MNIST research, but expect to personally 
-learn about best practices in this field.  
+dataset.   I don't expect to contribute anything new to MNIST research, but expect to 
+personally learn about best practices in this field.  
 
-I would propose to build a simple classifier from scratch that finds a distance metric between a 
-sample image and a dataset that contrived from the mean pixel values of each class.   This is 
-inspired by ideas proposed in section 4.2 of Tim Chartier's When Life Is Linear book.  Once we 
-have our predictions, we will find appropriate ways to describe the performance of our model.  
+I propose to build a simple multiclass classifier from scratch that finds a distance 
+metric between a sample image and a dataset contrived from the mean pixel values 
+of each class.   This is inspired by ideas proposed in section 4.2 of Tim Chartier's "When 
+Life Is Linear" book.  Once we have our predictions, we will describe and interpret the 
+performance of our multiclass classifier.  
 
 
 Resources:  
-I have set up a Jupyter notebook on a VM as part of an allocation grant from the Open Science Data 
-Cloud (https://www.opensciencedatacloud.org/).  The OSDC offers services similar to commercial cloud 
-providers like AWS, Azure and Google Compute, but is designed to serve the 'long tail' of the data 
-science community by providing allocation grants to researchers in need of resources.  
+I have set up a Jupyter notebook on a VM as part of an allocation grant from the 
+Open Science Data Cloud (https://www.opensciencedatacloud.org/).  The OSDC offers services 
+similar to commercial cloud providers like AWS, Azure and Google Compute, but is designed 
+to serve the 'long tail' of the data science community by providing allocation grants to 
+researchers in need of resources.  
 
-The full MNIST dataset is not large, and can be managed from the ephemeral storage in the VM.  I 
-port forward the jupyter notebook through a proxy server and work in a browser on my local machine. 
-Github is used to manage the code.  
+The full MNIST dataset is not large, and can be managed from the ephemeral storage in the 
+VM.  I port forward the jupyter notebook through a proxy server and work in a browser on my 
+local machine. Github is used to manage the code.  
 
 
 Workflow:
@@ -35,7 +37,7 @@ b) Build functions to switch back and forth between:
 		* Dictionary: k = class, v = image vector
 c) Build a simple classifier from scratch: 
 	* "Train" model:
-		* Subset training data by known number (classes)
+		* Subset training data by known classes
 		* get mean pixel value for each class
 	* Viz model (Viz):
 		* convert mean value classifier to image, view each class in notebook
@@ -44,11 +46,13 @@ c) Build a simple classifier from scratch:
 d) Results Reporting: 
 	* Build DF, row = test image
 	* Report: ground truth (actual class), dist_values and predictions for each distance method    
-e)  Describe performance of models, incorporate into performance visualization (Viz)
-	* ROC measures - AUC, H-Measure, F1?   Others?   What are effective ways to measure non-binary classifiers?
+e)  Describe performance of models, incorporate into performance visualization 
+    * What are effective ways to measure multiclass classifiers?
+    * ROC measures / AUC, Hamming-Score, Precision / Recall / F1, Confusion Matrix  (Viz)
+f)  Interpret results
 
 
-EXTRA:
+Future Studies (Out of Scope):
 compare the simple built from scratch model to more complex models using available libraries: 
 
 * explore scikit-learn, other python libraries for classifier modeling
@@ -66,4 +70,6 @@ References:
     https://www.tensorflow.org/get_started/mnist/beginners
     https://en.wikipedia.org/wiki/Cosine_similarity
     https://en.wikipedia.org/wiki/Euclidean_distance
+    https://en.wikipedia.org/wiki/Multiclass_classification
+    https://stats.stackexchange.com/questions/44261/how-to-determine-the-quality-of-a-multiclass-classifier
     
