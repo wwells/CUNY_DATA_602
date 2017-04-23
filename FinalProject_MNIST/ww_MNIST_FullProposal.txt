@@ -1,11 +1,7 @@
 The DATA 602 - Advanced Programming Techniques Final Project will serve as an opportunity 
 to learn more about image manipulation and multiclass classification.   Since I'm also 
 enrolled in DATA 605 - Fundamentals of Computational Mathematics, it will be a good 
-opportunity to demonstrate and test basic Linear Algebra skills. 
-
-MNIST seems to be a good choice since there are a lot of existing materials on using this 
-dataset.   I don't expect to contribute anything new to MNIST research, but expect to 
-personally learn about best practices in this field.  
+opportunity to demonstrate and test basic Linear Algebra skills.   
 
 I propose to build a simple multiclass classifier from scratch that finds a distance 
 metric between a sample image and a dataset contrived from the mean pixel values 
@@ -13,17 +9,31 @@ of each class.   This is inspired by ideas proposed in section 4.2 of Tim Charti
 Life Is Linear" book.  Once we have our predictions, we will describe and interpret the 
 performance of our multiclass classifier.  
 
+MNIST seems to be a good choice since there are a lot of existing materials on using this 
+dataset.   I don't expect to contribute anything new to MNIST research.  My focus will 
+instead be on building from scratch each step required for multiclass classification.  
+While more effective models are likely available in existing python libraries like 
+scikit-learn, tensorflow, and others, initially avoiding the 'blackbox' and building by 
+hand will lead to a greater in-depth understanding of training, testing, and evaluating 
+the performance of a multiclass classifier. 
+
 
 Resources:  
 I have set up a Jupyter notebook on a VM as part of an allocation grant from the 
-Open Science Data Cloud (https://www.opensciencedatacloud.org/).  The OSDC offers services 
+Open Science Data Cloud (opensciencedatacloud.org).  The OSDC offers services 
 similar to commercial cloud providers like AWS, Azure and Google Compute, but is designed 
 to serve the 'long tail' of the data science community by providing allocation grants to 
-researchers in need of resources.  
+researchers in need of resources.  I help manage the operations of the OSDC as part of my 
+work with the Open Commons Consortium (occ-data.org). 
 
 The full MNIST dataset is not large, and can be managed from the ephemeral storage in the 
 VM.  I port forward the jupyter notebook through a proxy server and work in a browser on my 
 local machine. Github is used to manage the code.  
+
+
+Deliverable:
+A Jupyter notebook with all code, interpretation, and visualization; a github repository with 
+all data needed to run the notebook. 
 
 
 Workflow:
