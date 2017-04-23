@@ -1,3 +1,4 @@
+Overview: 
 The DATA 602 - Advanced Programming Techniques Final Project will serve as an opportunity 
 to learn more about image manipulation and multiclass classification.   Since I'm also 
 enrolled in DATA 605 - Fundamentals of Computational Mathematics, it will be a good 
@@ -14,8 +15,8 @@ dataset.   I don't expect to contribute anything new to MNIST research.  My focu
 instead be on building from scratch each step required for multiclass classification.  
 While more effective models are likely available in existing python libraries like 
 scikit-learn, tensorflow, and others, initially avoiding the 'blackbox' and building by 
-hand will lead to a greater in-depth understanding of training, testing, and evaluating 
-the performance of a multiclass classifier. 
+hand will lead to a greater comprehension of the requirements for training, testing, and 
+evaluating the performance of a multiclass classifier. 
 
 
 Resources:  
