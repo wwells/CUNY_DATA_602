@@ -45,7 +45,6 @@ b) Build functions to switch back and forth between:
 	* images - be able to view sample image in Jupyter notebook  (Viz)
 	* vector - this is what we will primarily use to build our classifier; 
 		* Image = 28 * 28; convert to 1 * 784 vector for simplicity
-		* Dictionary: k = class, v = image vector
 c) Build a simple classifier from scratch: 
 	* "Train" model:
 		* Subset training data by known classes
@@ -72,15 +71,12 @@ compare the simple built from scratch model to more complex models using availab
 
 
 References:
-    https://www.kaggle.com/archaeocharlie/digit-recognizer/a-beginner-s-approach-to-classification
-    https://martin-thoma.com/classify-mnist-with-pybrain/
-    https://gist.github.com/akesling/5358964
     When Life is Linear, Tim Chartier
+    https://www.kaggle.com/archaeocharlie/digit-recognizer/a-beginner-s-approach-to-classification
+    https://gist.github.com/akesling/5358964
     http://colah.github.io/posts/2014-10-Visualizing-MNIST/
     http://stackoverflow.com/questions/17210646/python-subplot-within-a-loop-first-panel-appears-in-wrong-position
-    https://www.tensorflow.org/get_started/mnist/beginners
     https://en.wikipedia.org/wiki/Cosine_similarity
     https://en.wikipedia.org/wiki/Euclidean_distance
-    https://en.wikipedia.org/wiki/Multiclass_classification
-    https://stats.stackexchange.com/questions/44261/how-to-determine-the-quality-of-a-multiclass-classifier
-    
+    http://stackoverflow.com/questions/14984119/python-pandas-remove-duplicate-columns
+    https://www.analyticsvidhya.com/blog/2016/01/12-pandas-techniques-python-data-manipulation/
